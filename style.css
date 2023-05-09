@@ -122,4 +122,15 @@ a {
 
 .attribution {
   color: var(--white);
+  margin: 50px 0;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.attribution a {
+  color: var(--medium-grey);
+}
+
+.attribution a:hover {
+  color: var(--light-grey);
 }
