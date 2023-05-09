@@ -48,7 +48,6 @@ a {
   padding: 35px;
   border-radius: 25px;
   overflow: hidden;
-  z-index: -1;
   position: relative;
 }
 
@@ -63,10 +62,6 @@ a {
   box-shadow: 0 15px 400px 0 var(--dark-blue);
 }
 
-.card-content {
-  z-index: 1;
-}
-
 #rating .icon, #rating .num-item {
   background-color: var(--dark-blue);
   width: 50px;
@@ -76,6 +71,16 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+
+#rating .num-item:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+#rating .num-item:focus {
+  background-color: var(--light-grey);
+  color: var(--white);
 }
 
 #rating .text, #rating .num-list, #rating .btn-submit {
@@ -107,4 +112,14 @@ a {
   border-radius: 30px;
   width: 100%;
   height: 40px;
+}
+
+.btn-submit button:hover{
+  background-color: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.attribution {
+  color: var(--white);
 }
