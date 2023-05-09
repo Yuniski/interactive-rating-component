@@ -12,14 +12,76 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
   font-size: 15px;
   font-family: 'Kumbh Sans', sans-serif;
   font-family: 'Overpass', sans-serif;
+  background-color: #1f1f1f;
 }
 
-#rating {
+a {
+  text-decoration: none;
+}
+
+#thanks {
   display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.card {
+  background-color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 400px;
+  padding: 35px;
+  border-radius: 25px;
+}
+
+#rating .icon, #rating .num-item {
+  background-color: var(--dark-blue);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.num-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text h2 {
+  color: var(--white);
+}
+
+.text p, .num-list a {
+  color: var(--medium-grey);
+}
+
+#rating .text p {
+  padding-top: 15px;
+}
+
+.btn-submit button {
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 400;
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+  height: 40px;
 }
