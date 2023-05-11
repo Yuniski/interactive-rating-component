@@ -11,7 +11,7 @@ export default function Rating () {
         <p>Please let us know how we did with your support request. All feedback is appreciated 
           to help us improve our offering!</p>
       </div>
-      <div class="num-list">
+      <div class="num-list" id="list">
         <a href="#" class="num-item">1</a>
         <a href="#" class="num-item">2</a>
         <a href="#" class="num-item">3</a>
