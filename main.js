@@ -9,20 +9,31 @@ app.innerHTML += Rating;
 app.innerHTML += Thanks;
 app.innerHTML += Attribution;
 
+const ratingDiv = document.getElementById('rating');
+const thanksDiv = document.getElementById('thanks');
+const resultDiv = document.getElementById('result');
 const submit = document.getElementById("submit");
 const numItems = document.getElementsByClassName("num-item");
 const numItemsArray = Array.from(numItems);
+let result = "";
 
-const getResult = () => {
-  numItemsArray.forEach((element) => {
-    element.addEventListener("click", (e) => {
-      e.preventDefault();
-      console.log(element.innerText);
-      return element.innerText;
-    });
+numItemsArray.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    if (!element.classList.contains('active')) {
+      numItemsArray.forEach((item) => {
+        item.classList.remove('active');
+      });
+
+      element.classList.add('active');
+      result = element.innerText;
+    }
   });
-};
+});
 
-getResult();
-
-submit.addEventListener("click", () => console.log("btn submit"));
+submit.addEventListener('click', () => {
+  resultDiv.innerHTML= `<h4>You selected <span>${result}</span> out of 5</h4>`;
+  ratingDiv.classList.add('hide');
+  thanksDiv.classList.remove('hide');
+});

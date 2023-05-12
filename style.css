@@ -31,7 +31,6 @@ a {
   flex-direction: column;
   align-items: center;
   margin: 100px 0;
-  
 }
 
 .card {
@@ -175,4 +174,6 @@ a {
   color: var(--light-grey);
 }
 
-
+.hide {
+  display: none !important;
+}
